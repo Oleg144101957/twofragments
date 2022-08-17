@@ -14,7 +14,7 @@ import com.vishnevskiypro.twofragments.databinding.FragmentTwoBinding
 class TwoFragment : Fragment() {
 
     private lateinit var binding: FragmentTwoBinding
-    lateinit var model: SharedViewModel
+
 
 
     override fun onCreateView(
@@ -24,16 +24,16 @@ class TwoFragment : Fragment() {
         // Inflate the layout for this fragment
 
         binding = FragmentTwoBinding.inflate(layoutInflater, container, false)
+
+        binding.btnTwo.setOnClickListener {
+            binding.tvTwo.text = (requireActivity() as MainActivity).message
+        }
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
-        binding.btnTwo.setOnClickListener {
-            val msg = binding.editTextTwo.text.toString()
-            model.sendMessage(msg)
-        }
     }
 }

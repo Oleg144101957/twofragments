@@ -22,13 +22,14 @@ class OneFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        val mViewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
-
-        mViewModel.message.observe(viewLifecycleOwner, {
-            binding.tvOne.text = it
-        })
 
         binding = FragmentOneBinding.inflate(layoutInflater, container, false)
+
+        binding.btnOne.setOnClickListener {
+            (requireActivity() as MainActivity).message = binding.editTextOne.text.toString()
+        }
+
+
 
         return binding.root
     }
