@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TwoFragments</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_one">Fragment One</string>
+    <string name="fragment_two">Fragment Two</string>
+    <string name="text_input_fragment_one">Text Input Fragment One</string>
+    <string name="button_one">Button One</string>
+    <string name="text_input_fragment_two">Text Input Fragment Two</string>
+    <string name="button_two">Button Two</string>
+</resources>
